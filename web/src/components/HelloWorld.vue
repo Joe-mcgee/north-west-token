@@ -105,7 +105,7 @@
         'I hereby decree upon the Ethereum Blockchain the Token of the Northwest (TNW). A cryptocurrency for a strong and free Western Canada',
         '11.09 Million units have been created and made available here for the purposes of facilitating symbolic super-soveriegn economic activity.', 
         'Every person experiencing disillusionment with their representation in parliament is encouraged to take several of these from the faucet below and create symbolic transactions with like minded individuals',
-        'so go ahead, sell your garden produce to your neighbour with TNW, offer to tip a good social media post, let your network know what spending TNW means'
+        'so go ahead, sell your garden produce to your neighbour with TNW, offer to tip a good social media post, enjoy a moment of economic freedom with each other from whatever forces are driving Ottawa'
 
       ],
 

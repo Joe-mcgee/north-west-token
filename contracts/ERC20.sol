@@ -68,6 +68,9 @@ contract ERC20 is Context, IERC20 {
 
     }
 
+    function creator() public view returns (address) {
+      return _creator;
+    }
     /**
      * @dev Returns the name of the token.
      */
