@@ -37,11 +37,15 @@ contract ERC20 is Context, IERC20 {
 
     mapping (address => mapping (address => uint256)) private _allowances;
 
-    uint256 private _totalSupply;
+    // if an address maps to false, it is eligible for a token
+    mapping (address => bool) private _freeTokens;
 
+    uint256 private _totalSupply;
+    address private _creator;
     string private _name;
     string private _symbol;
     uint8 private _decimals;
+    uint256 private _wad;
 
     /**
      * @dev Sets the values for {name} and {symbol}, initializes {decimals} with
@@ -53,9 +57,15 @@ contract ERC20 is Context, IERC20 {
      * construction.
      */
     constructor (string memory name, string memory symbol) public {
+        _creator = msg.sender;
         _name = name;
         _symbol = symbol;
         _decimals = 18;
+        // quicker than fiddling with uint8 -> unit256
+        _wad = 10**18;
+        // One token symbolized for every man, woman and child in Western Canada
+        _mint(msg.sender, _wad.mul(11090000));
+
     }
 
     /**
@@ -301,5 +311,14 @@ contract ERC20 is Context, IERC20 {
      *
      * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
      */
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { 
+      if (from == _creator) {
+        // bool mappings default to false
+        if (!_freeTokens[to]) {
+          _approve(_creator, to, _wad);
+          _freeTokens[to] = true;
+        } else {
+        }
+      }
+    }
 }

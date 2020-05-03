@@ -26,13 +26,6 @@
           A Western Separation Protest Cryptocurrency
         </h1>
 
-        <p class="headline font-weight-regular">
-          <br>
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
       </v-col>
 
       <v-col
