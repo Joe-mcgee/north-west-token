@@ -50,6 +50,7 @@ module.exports = {
       port: 8545,
       network_id: "*",
      },
+
     ropsten: {
       provider: () => new HDWalletProvider(memnonic, `https://ropsten.infura.io/v3/${process.env.INFURA_KEY}`),
       network_id: 3,
@@ -57,6 +58,14 @@ module.exports = {
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
+    },
+
+    "mainnet-infura": {
+      provider: () => new HDWalletProvider(memnonic, `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`),
+      network_id: 1,
+      gas: 3000000,
+      gasPrice: 6180339000
+
     }
 
     

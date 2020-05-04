@@ -52,9 +52,8 @@
        'In protest of the federalist imperialism subjected upon Western Canadians by foreign economic, ideological and political interests',
         'I hereby decree upon the Ethereum Blockchain the Token of the Northwest. A cryptocurrency for a Strong and Free Western Canada',
         '11.09 Million units have been created and made available here for the purposes of facilitating symbolic super-sovereign economic activity.', 
-        'Every person experiencing disillusionment with their representation in parliament is encouraged to take several of these from the faucet below and create symbolic transactions with like minded individuals',
-        'so go ahead, sell your garden produce to your neighbour with this token, offer to tip a good social media post, enjoy a moment of economic freedom with each other from whatever forces are driving Ottawa'
-
+        'Every person experiencing disillusionment with their representation in parliament is encouraged to take a token from the faucet below and make up reasons to trade them',
+        'so go ahead, sell your garden produce to your neighbours, offer to tip a good social media post- enjoy a moment of economic freedom with each other from whatever forces that are driving Ottawa'
       ],
 
       ecosystem: [
