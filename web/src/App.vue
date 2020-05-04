@@ -59,13 +59,11 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-import Faucet from './components/Faucet';
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
-    Faucet,
   },
 
   data: () => ({

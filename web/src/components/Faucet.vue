@@ -1,26 +1,120 @@
 <template>
-  <v-form
-    v-model="valid"
-  >
-    <v-btn class="mr-4" @click='openFaucet'>
-      <v-progress-circular
-        v-if="mining"
-        intdeterminate
-        color="amber">
-      </v-progress-circular>
-      <p v-if="!valid && !mining">
-      Metamask not found</p>
-      <p v-if="valid && !mining">Get a Token</p>
-      <p v-if="!valid && !mining">Metamask not found</p>
-    </v-btn>
-    <v-snackbar
-      :color="snackbar.color"
-      v-model="snackbar.show"
-      top
-    >
-    {{snackbar.message}}
-    </v-snackbar>
-  </v-form>
+  <v-container>
+    <v-row>
+      <v-col>
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+        <a target="_blank" href="https://cointelegraph.com/explained/erc-20-tokens-explained">
+          <v-img
+            class="black--text align-end"
+            height="200px"
+            src="https://en.bitcoinwiki.org/upload/en/images/thumb/4/4a/Erc20.png/400px-Erc20.png"
+          >
+            <v-card-title>Built with ERC-20</v-card-title>
+          </v-img>
+        </a>
+
+          <v-card-subtitle class="pb-0">Using the latest contracts from OpenZeppelin</v-card-subtitle>
+
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+        <a target="_blank" href="https://metamask.io/">
+          <v-img
+            class="black--text align-end"
+            height="200px"
+            src="https://www.ledger.com/wp-content/uploads/2019/06/assets_logo_metamask.jpg"
+          >
+            <v-card-title>Usable Online with Metamask</v-card-title>
+          </v-img>
+        </a>
+
+          <v-card-subtitle class="pb-0">Metamask can be a wallet for your Tokens</v-card-subtitle>
+
+        </v-card>
+      </v-col>
+
+      <v-col>
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+        <a target="_blank" href="https://ndax.io">
+          <v-img
+            class="white--text align-end"
+            height="200px"
+            src="https://bitcoinexchangeguide.com/wp-content/uploads/2018/06/ndax.io_-696x449.jpg"
+          >
+          <v-card-title>Low on Gas? ETH available at NDAX</v-card-title>
+          </v-img>
+          </a>
+          <v-card-subtitle class="pb-0">Like a car, gas is needed to run the blockhain.</v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>Get ETH with e-transfer at NDAX,</div>
+
+            <div>A Calgary based exchange</div>
+          </v-card-text>
+
+        </v-card>
+      </v-col>
+      <v-col>
+        <v-card
+          class="mx-auto"
+          max-width="400"
+        >
+          <v-img
+            class="black--text align-end"
+            height="200px"
+            src="https://me.eui.eu/gergo-motyovszki/wp-content/uploads/sites/226/2018/08/helicopter-1.jpg"
+          >
+            <v-card-title>One Touch Token Faucet</v-card-title>
+          </v-img>
+
+          <v-card-subtitle class="pb-0">Quickly get a Token by pressing a button (below)</v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>Limit One Per Address</div>
+
+          </v-card-text>
+
+        </v-card>
+      </v-col>
+    </v-row>
+    <br/>
+    <v-row
+      align="center"
+      justify="center">
+        <v-form
+          v-model="valid"
+        >
+          <v-btn x-large class="mr-4" @click='openFaucet'>
+            <v-progress-circular
+              v-if="mining"
+              intdeterminate
+              color="amber">
+            </v-progress-circular>
+            <p v-if="!valid && !mining">
+            Metamask not found</p>
+            <p v-if="valid && !mining">Get a Token</p>
+            <p v-if="!valid && !mining">Metamask not found</p>
+          </v-btn>
+          <v-snackbar
+            :color="snackbar.color"
+            v-model="snackbar.show"
+            top
+          >
+          {{snackbar.message}}
+          </v-snackbar>
+        </v-form>
+    </v-row>
+  </v-container>
 </template>
 <script>
 import * as ERC20Service from '../shared/ERC20Service'

@@ -1,5 +1,20 @@
 <template>
   <v-container class="ma-0 pa-0">
+    
+    <v-row
+      width="100%"
+      style="padding-bottom:15%; padding-top:15%;"
+      id="title-background"
+      justify="center"
+      align="center"
+      class="text-center">
+      <v-col
+        class="mb-4">
+        <h1 class="display-2 font-weight-bold mb-3">
+          A Western Separatism Protest Cryptocurrency
+        </h1>
+      </v-col>
+    </v-row>
     <v-carousel
       width="100%"
       hide-delimiter-background
@@ -19,91 +34,24 @@
             </v-row>
       </v-carousel-item>
     </v-carousel>
-    <v-row class="text-center">
-
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          A Western Separation Protest Cryptocurrency
-        </h1>
-
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          New to Ethereum?
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in newToEthereum"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Western Separatism Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
-
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          About
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
-    </v-row>
+    <Faucet/>
   </v-container>
 </template>
 
 <script>
+  import Faucet from './Faucet'
   export default {
+    components: {
+      Faucet
+    },
     name: 'HelloWorld',
 
     data: () => ({
 
       slides: [
        'In protest of the federalist imperialism subjected upon Western Canadians by foreign economic, ideological and political interests',
-        'I hereby decree upon the Ethereum Blockchain the Token of the Northwest (TNW). A cryptocurrency for a strong and free Western Canada',
-        '11.09 Million units have been created and made available here for the purposes of facilitating symbolic super-soveriegn economic activity.', 
+        'I hereby decree upon the Ethereum Blockchain the Token of the Northwest (TotNW). A cryptocurrency for a Strong and Free Western Canada',
+        '11.09 Million units have been created and made available here for the purposes of facilitating symbolic super-sovereign economic activity.', 
         'Every person experiencing disillusionment with their representation in parliament is encouraged to take several of these from the faucet below and create symbolic transactions with like minded individuals',
         'so go ahead, sell your garden produce to your neighbour with TNW, offer to tip a good social media post, enjoy a moment of economic freedom with each other from whatever forces are driving Ottawa'
 
@@ -162,3 +110,9 @@
     }),
   }
 </script>
+<style>
+#title-background {
+  background-image: url('../assets/Battle_of_Fish_Creek.jpg');
+  background-size: cover;
+}
+</style>
