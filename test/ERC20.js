@@ -44,5 +44,20 @@ contract("ERC20", async (accounts) => {
     }
   })
 
+  it('should stop the creator from transfering tokens', async () => {
+    try {
+
+      let transfer = await instance.transferFrom.sendTransaction(
+        accounts[0],
+        accounts[2],
+        web3.utils.toWei('2', 'ether'),
+        {from: accounts[0]}
+      )
+      assert.fail('no error occured')
+    } catch (e) {
+
+    }
+  })
+
 
 })

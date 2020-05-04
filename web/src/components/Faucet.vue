@@ -16,7 +16,7 @@
           </v-img>
         </a>
 
-          <v-card-subtitle class="pb-0">Using the latest contracts from OpenZeppelin</v-card-subtitle>
+          <v-card-subtitle class="pb-0">Does what an average person expects money to do</v-card-subtitle>
 
         </v-card>
       </v-col>
@@ -35,7 +35,11 @@
           </v-img>
         </a>
 
-          <v-card-subtitle class="pb-0">Metamask can be a wallet for your Tokens</v-card-subtitle>
+          <v-card-subtitle class="pb-0">Add the token in metamask with the custom token option with address: </v-card-subtitle>
+
+          <v-card-text class="text--primary">
+            <div>{{contractAddress}}</div>
+          </v-card-text>
 
         </v-card>
       </v-col>
@@ -54,10 +58,10 @@
           <v-card-title>Low on Gas? ETH available at NDAX</v-card-title>
           </v-img>
           </a>
-          <v-card-subtitle class="pb-0">Like a car, gas is needed to run the blockhain.</v-card-subtitle>
+          <v-card-subtitle class="pb-0">Fund your transactions with ETH</v-card-subtitle>
 
           <v-card-text class="text--primary">
-            <div>Get ETH with e-transfer at NDAX,</div>
+            <div>Available with e-transfer at NDAX,</div>
 
             <div>A Calgary based exchange</div>
           </v-card-text>
@@ -121,6 +125,7 @@ import * as ERC20Service from '../shared/ERC20Service'
 import Web3 from 'web3'
 export default {
   name: 'Faucet',
+  contractAddress: '',
   data: () => ({
     valid: false,
     mining: false,
@@ -131,6 +136,7 @@ export default {
     }
   }),
   async created() {
+    this.contractAddress = process.env.VUE_APP_CONTRACT_ADDRESS
     let hasWeb3 = await this.addWeb3()
     if (hasWeb3) {
       this.valid = true;

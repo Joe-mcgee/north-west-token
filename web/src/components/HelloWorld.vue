@@ -11,7 +11,7 @@
       <v-col
         class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          A Western Separatism Protest Cryptocurrency
+          A Protest Cryptocurrency for Western Canadians
         </h1>
       </v-col>
     </v-row>
@@ -50,10 +50,10 @@
 
       slides: [
        'In protest of the federalist imperialism subjected upon Western Canadians by foreign economic, ideological and political interests',
-        'I hereby decree upon the Ethereum Blockchain the Token of the Northwest (TotNW). A cryptocurrency for a Strong and Free Western Canada',
+        'I hereby decree upon the Ethereum Blockchain the Token of the Northwest. A cryptocurrency for a Strong and Free Western Canada',
         '11.09 Million units have been created and made available here for the purposes of facilitating symbolic super-sovereign economic activity.', 
         'Every person experiencing disillusionment with their representation in parliament is encouraged to take several of these from the faucet below and create symbolic transactions with like minded individuals',
-        'so go ahead, sell your garden produce to your neighbour with TNW, offer to tip a good social media post, enjoy a moment of economic freedom with each other from whatever forces are driving Ottawa'
+        'so go ahead, sell your garden produce to your neighbour with this token, offer to tip a good social media post, enjoy a moment of economic freedom with each other from whatever forces are driving Ottawa'
 
       ],
 

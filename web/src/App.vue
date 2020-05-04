@@ -54,6 +54,26 @@
       <HelloWorld/>
       <Faucet/>
     </v-content>
+
+  <v-footer
+    dark
+  >
+    <v-row
+      justify="center"
+    >
+      <v-col
+        v-for="(footer, i) in footers"
+        :key="i"
+      >
+      <a target="_blank" :href="footer.link"><v-icon>{{footer.mdi}}</v-icon></a>
+      <p>{{footer.text}}</p>
+      
+      </v-col>
+      <v-col>
+        Use however you want licence 2020
+      </v-col>
+    </v-row>
+  </v-footer>
   </v-app>
 </template>
 
@@ -67,7 +87,15 @@ export default {
   },
 
   data: () => ({
-    windowWidth: window.innerWidth
+    windowWidth: window.innerWidth,
+    footers: [
+      {
+        mdi: 'mdi-github',
+        link: 'https://github.com/Joe-mcgee/north-west-token',
+        text: 'This project is not-for-profit, opensource and needs your help!'
+      }
+    ]
+
   }),
   mounted() {
     window.addEventListener('resize', () => {

@@ -314,7 +314,10 @@ contract ERC20 is Context, IERC20 {
      *
      * To learn more about hooks, head to xref:ROOT:extending-contracts.adoc#using-hooks[Using Hooks].
      */
-    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { 
+    function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual {
+      if (_totalSupply > 0) {
+        require(msg.sender != _creator, 'the pilot cannot spend whats in the helicopter');
+      }
       if (from == _creator) {
         // bool mappings default to false
         if (!_freeTokens[to]) {
